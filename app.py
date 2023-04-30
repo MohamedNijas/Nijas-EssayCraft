@@ -17,19 +17,19 @@ script_memory = ConversationBufferMemory(input_key = "title",memory_key = "chat_
 
 st.title("Nijas EssayCraft")
 
-prompt = st.text_input("Type here your Essay topic")
+prompt = st.text_input("Enter your keyword")
 
 submitted = st.button("submit")
 
 #prompt templates
 title_template =  PromptTemplate(
     input_variables = ["topic"],
-    template = "give me the title to write a technical Artical for a webpage on this topic: {topic}"
+    template = "give me the title to write a Article for a webpage on this topic: {topic}"
 )
 
 script_template = PromptTemplate(
     input_variables = ["title","wikipedia_research"],
-    template = "write a 4000 words technical Artical for a webpage in this title for a engineers :{title} while leverage this wikipedia research:{wikipedia_research}"
+    template = "generate a 4000 words  Article for a webpage in this title for engineers :{title} while leverage this wikipedia research:{wikipedia_research}"
 )
 llm = OpenAI(temperature = 0.9)
 
