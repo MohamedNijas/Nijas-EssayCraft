@@ -38,7 +38,7 @@ script_chain = LLMChain(llm = llm,prompt = script_template,verbose = True,output
 #sequential_chain = SequentialChain(chains = [title_chain,script_chain],input_variables = ["topic"],output_variables= ["title","script"],verbose = True)
 #show the prompt
 wiki = WikipediaAPIWrapper()
-if prompt and submitted:
+if prompt or submitted:
     #response = sequential_chain({"topic":prompt})
     title = title_chain.run(prompt )
     wiki_research = wiki.run(prompt)
