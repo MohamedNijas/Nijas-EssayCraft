@@ -16,7 +16,7 @@ script_memory = ConversationBufferMemory(input_key = "title",memory_key = "chat_
 #APP
 
 st.title("Nijas EssayCraft")
-
+st.subheader("Only enter the keyword.I will give the title and Article for you")
 prompt = st.text_input("Enter your keyword")
 
 submitted = st.button("submit")
