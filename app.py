@@ -15,7 +15,7 @@ title_memory = ConversationBufferMemory(input_key = "topic",memory_key = "chat_h
 script_memory = ConversationBufferMemory(input_key = "title",memory_key = "chat_history")
 #APP
 st.set_page_config(page_title="Nijas EssayCraft", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded", 
-                   page_bg_img="background.jpg")
+                   page_bg_img="Nijas-EssayCraft/background.jpg")
 
 st.title("Nijas EssayCraft")
 st.subheader("Only enter the keyword.I will give the title and Article for you")
