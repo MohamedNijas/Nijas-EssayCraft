@@ -17,7 +17,7 @@ script_memory = ConversationBufferMemory(input_key = "title",memory_key = "chat_
 page_bg_img = '''
 <style>
 body {
-background-image: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZXNzYXl8ZW58MHx8MHx8&w=1000&q=80");
+background-image: url("https://dms.uom.lk/s/mcZXCLp3NASrpKt");
 background-size: cover;
 }
 </style>
