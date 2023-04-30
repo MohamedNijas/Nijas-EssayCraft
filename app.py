@@ -14,15 +14,6 @@ api_key = os.environ.get('OPENAI_API_KEY')
 title_memory = ConversationBufferMemory(input_key = "topic",memory_key = "chat_history" )
 script_memory = ConversationBufferMemory(input_key = "title",memory_key = "chat_history")
 #APP
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
-background-size: cover;
-}
-</style>
-'''
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Nijas EssayCraft")
 st.subheader("Only enter the keyword.I will give the title and Article for you")
