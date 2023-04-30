@@ -8,7 +8,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
 
 api_key = os.environ.get('OPENAI_API_KEY')
-os.environ["OPENAI_API_KEY"] = apikey
+#os.environ["OPENAI_API_KEY"] = apikey
 #memory
 
 title_memory = ConversationBufferMemory(input_key = "topic",memory_key = "chat_history" )
