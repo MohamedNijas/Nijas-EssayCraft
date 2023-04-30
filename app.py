@@ -1,5 +1,5 @@
 import os
-from apikey import apikey
+#from apikey import apikey
 import streamlit as st
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain,SequentialChain
@@ -7,6 +7,7 @@ from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
 
+api_key = os.environ.get('OPENAI_API_KEY')
 os.environ["OPENAI_API_KEY"] = apikey
 #memory
 
