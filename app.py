@@ -29,7 +29,7 @@ title_template =  PromptTemplate(
 
 script_template = PromptTemplate(
     input_variables = ["title","wikipedia_research"],
-    template = "generate a 4000 words  Article for a webpage in this title for engineers :{title} while leverage this wikipedia research:{wikipedia_research}"
+    template = "generate a large Article completly for a webpage in this title for engineers :{title} while leverage this wikipedia research:{wikipedia_research}"
 )
 llm = OpenAI(temperature = 0.9)
 
@@ -38,7 +38,7 @@ script_chain = LLMChain(llm = llm,prompt = script_template,verbose = True,output
 #sequential_chain = SequentialChain(chains = [title_chain,script_chain],input_variables = ["topic"],output_variables= ["title","script"],verbose = True)
 #show the prompt
 wiki = WikipediaAPIWrapper()
-if prompt or submitted:
+if prompt and submitted:
     #response = sequential_chain({"topic":prompt})
     title = title_chain.run(prompt )
     wiki_research = wiki.run(prompt)
