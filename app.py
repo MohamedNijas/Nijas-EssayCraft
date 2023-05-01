@@ -27,7 +27,7 @@ title_template =  PromptTemplate(
 
 script_template = PromptTemplate(
     input_variables = ["title","wikipedia_research"],
-    template = "write a 4000 word essay on {title} in the style of Siobhan Gallagher for engineers :{title} while leverage this wikipedia research:{wikipedia_research}"
+    template = "write a 4000 words complete essay on {title} in the style of Siobhan Gallagher for engineers while leverage this wikipedia research:{wikipedia_research}"
 )
 llm = OpenAI(temperature = 0.9)
 
