@@ -27,9 +27,9 @@ title_template =  PromptTemplate(
 
 script_template = PromptTemplate(
     input_variables = ["title","wikipedia_research"],
-    template = "write a 4000 words complete essay on {title} in the style of Siobhan Gallagher for engineers while leverage this wikipedia research:{wikipedia_research}"
+    template = "write a 4000 words complete technical article on title: {title} for engineers while leverage this wikipedia research:{wikipedia_research}"
 )
-llm = OpenAI(temperature = 0.9,max_tokens = 2048,frequency_penalty = 0, presence_penalty = 1.5)
+llm = OpenAI(temperature = 0.9,max_tokens = 2048,frequency_penalty = 0, presence_penalty = 2)
 
 title_chain = LLMChain(llm = llm,prompt = title_template,verbose = True,output_key = "title",memory = title_memory )
 script_chain = LLMChain(llm = llm,prompt = script_template,verbose = True,output_key = "script",memory = script_memory)
