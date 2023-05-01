@@ -37,11 +37,11 @@ script_chain = LLMChain(llm = llm,prompt = script_template,verbose = True,output
 
 wiki = WikipediaAPIWrapper()
 if prompt and submitted:
-    
-    title = title_chain.run(prompt )
-    wiki_research = wiki.run(prompt)
-    script = script_chain.run(title = title,wikipedia_research = wiki_research)
-   
+    with st.spinner("Generating article....."):
+        title = title_chain.run(prompt )
+        wiki_research = wiki.run(prompt)
+        script = script_chain.run(title = title,wikipedia_research = wiki_research)
+
     st.write(title)
     st.write(script)
 
